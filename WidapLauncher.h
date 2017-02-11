@@ -8,6 +8,8 @@
 #include <sys/stat.h> //used for telling if a file is really a folder
 #include "../Widap_includes/WidapStd.h"
 
+const double UI_SCALE=2.0;
+
 class AnimValue //a value which can be animated
 {
 public:
@@ -83,8 +85,7 @@ struct App //an application that can be launched
 	AnimValue vsbl;
 };
 
-
-const int WDTH=640, HGHT=320;
+const int WDTH=640*UI_SCALE, HGHT=320*UI_SCALE;
 const int FPS=30;
 const double MOVE_ANIM_TIME=0.5, FADE_ANIM_TIME=0.3; //time for all animations
 const char PROG_NAME[]="Widap Launcher";

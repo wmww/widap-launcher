@@ -131,6 +131,7 @@ void makeBknd()
 
 void display()
 {
+	/*
 	const double ANIM_FRAMS=12;
 	static int counter=ANIM_FRAMS+3; //+3 makes it smoother when it comes out
 	
@@ -139,8 +140,9 @@ void display()
 		--counter;
 		window.setPosition(sf::Vector2i(clamp(-(counter/ANIM_FRAMS)*(counter/ANIM_FRAMS)*WDTH, -WDTH, 0), sf::VideoMode::getDesktopMode().height-HGHT-28-2));
 	}
+	*/
 	
-	window.clear(sf::Color(4, 4, 4));
+	window.clear(sf::Color(32, 32, 32));
 	
 	//makeBknd();
 	
@@ -174,7 +176,7 @@ void prspctvList()
 		
 		if (vsbl>0.0001 && pos>-1 && pos<DSPLY_APP_NUM+after)
 		{
-			drawAppIcon(ptr, 420-750/(pos+2), 20+(380+(1-vsbl)*(1-vsbl)*800)/(pos+2), 2.0/(pos+2), 0, vsbl*clamp(1-pos/(DSPLY_APP_NUM+before+after), 0, 1));
+			drawAppIcon(ptr, (420-750/(pos+2))*UI_SCALE, (20+(380+(1-vsbl)*(1-vsbl)*800)/(pos+2))*UI_SCALE, (2.0/(pos+2))*UI_SCALE, 0, vsbl*clamp(1-pos/(DSPLY_APP_NUM+before+after), 0, 1));
 		}
 		
 		ptr=ptr->nxtApp;
@@ -212,7 +214,7 @@ void drawSrchBox()
 {
 	sf::Text text;
 	text.setFont(font);
-	text.setCharacterSize(48);
+	text.setCharacterSize(48*UI_SCALE);
 	
 	if (srchPtrn[0])
 	{
@@ -225,7 +227,7 @@ void drawSrchBox()
 		text.setColor(sf::Color(255, 255, 255, 64));
 	}
 	
-	text.setPosition(20, 10);
+	text.setPosition(20*UI_SCALE, 10*UI_SCALE);
 	
 	//text.setScale(.50, .50);
 	window.draw(text);
@@ -238,7 +240,7 @@ void drawAppIcon(App *app, double x, double y, double scale, double rot, double 
 	sf::Color slctClr(0, 255, 0, 255*alpha);
 	
 	double xTxt=x, yTxt=y;
-	int sizeTxt=52;
+	int sizeTxt=52; // this should not be multiplied by the UI scale for some reason
 	
 	/*sf::CircleShape bullet;
 	bullet.setRadius(sizeTxt/2);
