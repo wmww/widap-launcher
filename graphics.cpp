@@ -15,8 +15,14 @@ void graphicsInit()
 {
 	makeBknd();
     
-	if (!font.loadFromFile(FONT_PATH))
+	if(
+		!font.loadFromFile("/usr/share/fonts/truetype/ubuntu-font-family/UbuntuMono-R.ttf") &&
+		!font.loadFromFile("/usr/share/fonts/truetype/freefont/FreeMono.ttf") &&
+		!font.loadFromFile("/usr/share/fonts/TTF/DejaVuSans.ttf")
+	)
+	{
 		std::cout << "!! font not found !!" << std::endl;
+	}
     
    // bkndSprite.setTexture(bkndTexture);
     
