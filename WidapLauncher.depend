@@ -1,0 +1,20 @@
+# depslib dependency file v1.0
+1486850626 source:/home/william/c++/WidapLauncher/graphics.cpp
+	"WidapLauncher.h"
+
+1488072828 /home/william/c++/WidapLauncher/WidapLauncher.h
+	<SFML/Graphics.hpp>
+	<cstdlib>
+	<string.h>
+	<iostream>
+	<fstream>
+	<unistd.h>
+	<dirent.h>
+	<sys/stat.h>
+	"../Widap_includes/WidapStd.h"
+
+1441813546 /home/william/c++/Widap_includes/WidapStd.h
+	<windows.h>
+	<stdlib.h>
+	<math.h>
+

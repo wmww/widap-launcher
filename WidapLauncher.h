@@ -8,7 +8,7 @@
 #include <sys/stat.h> //used for telling if a file is really a folder
 #include "../Widap_includes/WidapStd.h"
 
-const double UI_SCALE=2.0;
+extern double UI_SCALE;
 
 class AnimValue //a value which can be animated
 {
