@@ -18,3 +18,25 @@
 	<stdlib.h>
 	<math.h>
 
+1502280739 source:/home/william/code/WidapLauncher/graphics.cpp
+	"WidapLauncher.h"
+
+1506036496 /home/william/code/WidapLauncher/WidapLauncher.h
+	<SFML/Graphics.hpp>
+	<cstdlib>
+	<string.h>
+	<iostream>
+	<fstream>
+	<unistd.h>
+	<dirent.h>
+	<sys/stat.h>
+	"../Widap_includes/WidapStd.h"
+
+1493730548 /home/william/code/Widap_includes/WidapStd.h
+	<windows.h>
+	<stdlib.h>
+	<math.h>
+
+1502280332 source:/home/william/code/WidapLauncher/main.cpp
+	"WidapLauncher.h"
+

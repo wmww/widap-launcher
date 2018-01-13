@@ -17,6 +17,7 @@ void graphicsInit()
     
 	if(
 		!font.loadFromFile("/usr/share/fonts/truetype/ubuntu-font-family/UbuntuMono-R.ttf") &&
+		!font.loadFromFile("/usr/share/fonts/TTF/UbuntuMono-R.ttf") &&
 		!font.loadFromFile("/usr/share/fonts/truetype/freefont/FreeMono.ttf") &&
 		!font.loadFromFile("/usr/share/fonts/TTF/DejaVuSans.ttf")
 	)
@@ -142,7 +143,12 @@ void display()
 	}
 	*/
 	
-	window.clear(sf::Color(32, 32, 32));
+	//window.clear(sf::Color(32, 32, 32));
+	
+	//window.clear(sf::Color(0, 0, 0));
+	
+	// arc dark
+	window.clear(sf::Color(23, 26, 31));
 	
 	//makeBknd();
 	
@@ -219,7 +225,7 @@ void drawSrchBox()
 	if (srchPtrn[0])
 	{
 		text.setString(srchPtrn);
-		text.setColor(sf::Color(0, 255, 255, 192));
+		text.setColor(sf::Color(255, 255, 255, 128));
 	}
 	else
 	{
@@ -236,8 +242,14 @@ void drawSrchBox()
 void drawAppIcon(App *app, double x, double y, double scale, double rot, double alpha)
 {
 	//sf::Color bkndClr(0, 0, 0, 128);
-	sf::Color txtClr(0, 255, 128, 128*alpha);
-	sf::Color slctClr(0, 255, 0, 255*alpha);
+	//sf::Color txtClr(0, 255, 128, 128*alpha);
+	//sf::Color slctClr(0, 255, 0, 255*alpha);
+	
+	sf::Color txtClr(82, 148, 226, 255*alpha);
+	sf::Color slctClr(0, 255, 255, 255*alpha);
+	
+	//sf::Color txtClr(0, 128, 0, 255*alpha);
+	//sf::Color slctClr(0, 255, 0, 255*alpha);
 	
 	double xTxt=x, yTxt=y;
 	int sizeTxt=52; // this should not be multiplied by the UI scale for some reason

@@ -7,16 +7,17 @@ App *slctApp=0; //currently selected app
 char srchPtrn[256]; //what has been searched
 double currentTime=0;
 AnimValue viewPos(0);
-double UI_SCALE=1;
+double UI_SCALE = 2;
 
 sf::Clock myClock;
 sf::Time frameTime=sf::seconds(1.0/FPS);
 
 int main()
 {
-	window.setPosition(sf::Vector2i(0, 0));
+	//window.setPosition(sf::Vector2i(0, 0));
 	
-	UI_SCALE=sf::VideoMode::getDesktopMode().width/1280.0;
+	//UI_SCALE=sf::VideoMode::getDesktopMode().width/2480.0;
+	//UI_SCALE=sf::VideoMode::getFullscreenModes()[0].width/2400.0;
 	
 	window.create(sf::VideoMode(WDTH*UI_SCALE, HGHT*UI_SCALE), PROG_NAME, sf::Style::None); //must be first to start capturing events immediately
 	
@@ -50,6 +51,8 @@ int main()
 	
 	display();
 	
+    
+	//window.setPosition(sf::Vector2i((sf::VideoMode::getFullscreenModes()[0].width * 0.5 - window.getSize().x)*0.5, (sf::VideoMode::getFullscreenModes()[0].height * 0.5 - window.getSize().y)*0.5));
     while (window.isOpen())
     {
         processEvents();

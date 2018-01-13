@@ -85,7 +85,7 @@ struct App //an application that can be launched
 	AnimValue vsbl;
 };
 
-const int WDTH=640*UI_SCALE, HGHT=320*UI_SCALE;
+const int WDTH=640, HGHT=320;
 const int FPS=30;
 const double MOVE_ANIM_TIME=0.5, FADE_ANIM_TIME=0.3; //time for all animations
 const char PROG_NAME[]="Widap Launcher";
@@ -95,7 +95,7 @@ const char APP_LIST_PATH[]="%s/.config/widap_launcher.data";
 const char BKND_IMAGE_PATH[]="%s/.config/widap_launcher_bknd.png";
 const int MAX_APPS=1000; //maximum number of apps
 const int MAX_POP_SCORE=10000000; //the highest the popularity score can get
-const int POP_SCORE_INC=4000; //what is added to the launched app
+const int POP_SCORE_INC=50000; //what is added to the launched app
 const double POP_SCORE_FACTOR=MAX_POP_SCORE/double(POP_SCORE_INC+MAX_POP_SCORE); //what each popScore is multiplied by each time
 const int DSPLY_APP_NUM=4;
 
