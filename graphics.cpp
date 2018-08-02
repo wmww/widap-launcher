@@ -19,7 +19,8 @@ void graphicsInit()
 		!font.loadFromFile("/usr/share/fonts/truetype/ubuntu-font-family/UbuntuMono-R.ttf") &&
 		!font.loadFromFile("/usr/share/fonts/TTF/UbuntuMono-R.ttf") &&
 		!font.loadFromFile("/usr/share/fonts/truetype/freefont/FreeMono.ttf") &&
-		!font.loadFromFile("/usr/share/fonts/TTF/DejaVuSans.ttf")
+		!font.loadFromFile("/usr/share/fonts/TTF/DejaVuSans.ttf") &&
+		!font.loadFromFile("/usr/share/fonts/noto/NotoSans-Regular.ttf")
 	)
 	{
 		std::cout << "!! font not found !!" << std::endl;
