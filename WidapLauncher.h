@@ -6,7 +6,7 @@
 #include <unistd.h> //used for launching programs and getting user name
 #include <dirent.h> //used for getting file in folder lists
 #include <sys/stat.h> //used for telling if a file is really a folder
-#include "../Widap_includes/WidapStd.h"
+#include "WidapStd.h"
 
 extern double UI_SCALE;
 
